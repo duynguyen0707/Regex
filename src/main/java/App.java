@@ -44,10 +44,10 @@ public class App {
 //                Chứa một ký tự @, sau @ là tên miền.
 //                Tên miền có thể là domain.xxx.yyy hoặc domain.xxx. Trong đó xxx và yyy là các chữ cái và có độ dài từ 2 trở lên.
 
-        String regex2 = "[\\w]+@{1}[a-z]+[[.]{0,1}[a-z]{2,}+.{0,1}[a-z]{2,}$|[.]{1}[a-z]{2,}]";
+        String regex2 = "[a-z][\\w]{0,}@{1}[a-z]+[[.]{0,1}[a-z]{2,}+.{0,1}[a-z]{2,}|[[.]{1}[a-z]{2,}]]";
         String input1 = "duy@hgdfgfd.com.hj gfdgfd@ygf.com a_ggfg_j@gjjjjjjhj.mb";
         System.out.println("Input1: " + input1);
-        Pattern p1 = Pattern.compile("[\\w]+@{1}[a-z]+[[.]{0,1}[a-z]{2,}+.{0,1}[a-z]{2,}$|[.]{1}[a-z]{2,}]");
+        Pattern p1 = Pattern.compile(regex2);
         System.out.println("Pattern p1: " + p1);
         Matcher m1 = p1.matcher(input1);
         System.out.println("m1:" + m1);
